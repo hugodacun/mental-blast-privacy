@@ -5,38 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mental Blast – Politique de confidentialité / Privacy Policy</title>
   <style>
-    :root { --bg: #0e0b1f; --surface: #1b1636; --text: #f4f1ff; --muted: #b8b1dc; --accent: #ffd23f; }
+    :root {
+      /* Palette Mental Blast (identique à src/theme.ts) */
+      --night: #14121F; --surface: #1F1C2E; --border: #3A3552;
+      --text: #F5F3FF; --muted: #A9A3C4;
+      --green: #7AEA9C; --yellow: #FFE15F; --pink: #FF96D3; --blue: #82C0FF;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { margin: 0; background: var(--night); color: var(--text); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
     main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
     header { text-align: center; margin-bottom: 32px; }
-    h1 { font-size: 30px; margin: 0 0 4px; letter-spacing: 1px; }
-    h1 span { color: var(--accent); }
-    nav { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
-    nav a { color: var(--bg); background: var(--accent); padding: 8px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; }
-    section { background: var(--surface); border-radius: 16px; padding: 24px 20px; margin-bottom: 24px; }
+    h1 { font-size: 32px; margin: 0 0 4px; letter-spacing: 2px; font-weight: 900; }
+    h1 .b1 { color: var(--green); } h1 .b2 { color: var(--yellow); } h1 .b3 { color: var(--pink); }
+    h1 .b4 { color: var(--blue); }  h1 .b5 { color: var(--green); }
+    .stripe { display: flex; height: 6px; width: 120px; margin: 14px auto 0; border-radius: 3px; overflow: hidden; }
+    .stripe i { flex: 1; } .stripe i:nth-child(1) { background: var(--green); } .stripe i:nth-child(2) { background: var(--yellow); }
+    .stripe i:nth-child(3) { background: var(--pink); } .stripe i:nth-child(4) { background: var(--blue); }
+    header p { color: var(--muted); }
+    nav { display: flex; gap: 12px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+    nav a { color: var(--night); background: var(--blue); padding: 8px 18px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+    nav a.alt { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+    section { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px 20px; margin-bottom: 24px; }
     h2 { font-size: 24px; margin-top: 0; }
-    h3 { font-size: 18px; margin: 24px 0 8px; color: var(--accent); }
+    h3 { font-size: 18px; margin: 24px 0 8px; color: var(--blue); }
     p, li { color: var(--muted); }
     strong { color: var(--text); }
-    a { color: var(--accent); }
+    a { color: var(--yellow); }
     .date { font-size: 14px; }
   </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>MENTAL <span>BLAST</span></h1>
+    <h1>MENTAL <span class="b1">B</span><span class="b2">L</span><span class="b3">A</span><span class="b4">S</span><span class="b5">T</span></h1>
     <p>Politique de confidentialité · Privacy Policy</p>
-    <nav><a href="#fr">Français</a><a href="#en">English</a></nav>
+    <div class="stripe"><i></i><i></i><i></i><i></i></div>
+    <nav>
+      <a href="#fr">Français</a><a href="#en">English</a>
+      <a class="alt" href="#support">Assistance · Support</a>
+    </nav>
   </header>
 
   <!-- ===================================================== FRANÇAIS -->
   <section id="fr" lang="fr">
     <h2>Politique de confidentialité</h2>
-    <p class="date">Dernière mise à jour : 11 octobre 2026</p>
+    <p class="date">Dernière mise à jour : 20 octobre 2026</p>
 
-    <p>Cette politique explique comment l'application mobile <strong>Mental Blast</strong> (l'« Application »), éditée par <strong>Da Cunha Carreira Hugo</strong> (« nous »), traite les informations de ses utilisateurs.</p>
+    <p>Cette politique explique comment l'application mobile <strong>Mental Blast</strong> (l'« Application »), disponible sur iOS et Android et éditée par <strong>Da Cunha Carreira Hugo</strong> (« nous »), traite les informations de ses utilisateurs.</p>
 
     <h3>1. En résumé</h3>
     <ul>
@@ -51,7 +66,7 @@
     <h3>3. Publicité (Google AdMob)</h3>
     <p>L'Application est financée par la publicité, fournie par Google AdMob (Google Ireland Limited / Google LLC). Pour afficher des annonces, mesurer leurs performances et lutter contre la fraude, Google peut collecter :</p>
     <ul>
-      <li>l'identifiant publicitaire de votre appareil ;</li>
+      <li>l'identifiant publicitaire de votre appareil (IDFA sur iOS, identifiant publicitaire Google sur Android) ;</li>
       <li>votre adresse IP et votre localisation approximative qui en découle ;</li>
       <li>des informations techniques sur l'appareil (modèle, système, langue) ;</li>
       <li>vos interactions avec les annonces (affichages, clics).</li>
@@ -61,8 +76,13 @@
 
     <h3>4. Votre consentement</h3>
     <p>Si vous êtes situé dans l'Espace économique européen, au Royaume-Uni ou en Suisse, un formulaire de consentement s'affiche au premier lancement. Vous pouvez accepter, refuser ou personnaliser l'utilisation de vos données à des fins publicitaires. Si vous refusez, des annonces non personnalisées ou limitées peuvent tout de même être affichées.</p>
+    <p><strong>Sur iPhone</strong>, l'Application vous demande également, via la fenêtre système d'Apple (App Tracking Transparency), l'autorisation d'accéder à l'identifiant publicitaire de votre appareil. Si vous refusez, cet identifiant n'est pas utilisé et les annonces restent moins personnalisées.</p>
     <p>Vous pouvez <strong>modifier ou retirer votre consentement à tout moment</strong> via le lien « Confidentialité » sur l'écran d'accueil de l'Application.</p>
-    <p>Vous pouvez aussi réinitialiser ou supprimer votre identifiant publicitaire dans les réglages de votre téléphone (Android : Paramètres → Confidentialité → Annonces).</p>
+    <p>Vous pouvez aussi gérer votre identifiant publicitaire dans les réglages de votre téléphone :</p>
+    <ul>
+      <li>iPhone : Réglages → Confidentialité et sécurité → Suivi ;</li>
+      <li>Android : Paramètres → Confidentialité → Annonces.</li>
+    </ul>
 
     <h3>5. Enfants</h3>
     <p>L'Application s'adresse à un public général et n'est pas spécifiquement destinée aux enfants de moins de 13 ans. Nous ne collectons sciemment aucune donnée personnelle concernant des enfants.</p>
@@ -80,9 +100,9 @@
   <!-- ===================================================== ENGLISH -->
   <section id="en" lang="en">
     <h2>Privacy Policy</h2>
-    <p class="date">Last updated: [DATE]</p>
+    <p class="date">Last updated: October 20, 2026</p>
 
-    <p>This policy explains how the <strong>Mental Blast</strong> mobile application (the "App"), published by <strong>Da Cunha Carreira Hugo</strong> ("we"), handles information about its users.</p>
+    <p>This policy explains how the <strong>Mental Blast</strong> mobile application (the "App"), available on iOS and Android and published by <strong>Da Cunha Carreira Hugo</strong> ("we"), handles information about its users.</p>
 
     <h3>1. Summary</h3>
     <ul>
@@ -97,7 +117,7 @@
     <h3>3. Advertising (Google AdMob)</h3>
     <p>The App is funded by advertising provided by Google AdMob (Google Ireland Limited / Google LLC). To serve ads, measure their performance and prevent fraud, Google may collect:</p>
     <ul>
-      <li>your device's advertising ID;</li>
+      <li>your device's advertising ID (IDFA on iOS, Google advertising ID on Android);</li>
       <li>your IP address and the approximate location derived from it;</li>
       <li>technical device information (model, operating system, language);</li>
       <li>your interactions with ads (impressions, clicks).</li>
@@ -107,8 +127,13 @@
 
     <h3>4. Your consent</h3>
     <p>If you are located in the European Economic Area, the United Kingdom or Switzerland, a consent form is shown when you first launch the App. You can accept, refuse or customise the use of your data for advertising. If you refuse, non-personalised or limited ads may still be shown.</p>
+    <p><strong>On iPhone</strong>, the App also asks, through Apple's system prompt (App Tracking Transparency), for permission to access your device's advertising identifier. If you decline, this identifier is not used and ads are less personalised.</p>
     <p>You can <strong>change or withdraw your consent at any time</strong> using the "Privacy" link on the App's home screen.</p>
-    <p>You can also reset or delete your advertising ID in your phone's settings (Android: Settings → Privacy → Ads).</p>
+    <p>You can also manage your advertising ID in your phone's settings:</p>
+    <ul>
+      <li>iPhone: Settings → Privacy &amp; Security → Tracking;</li>
+      <li>Android: Settings → Privacy → Ads.</li>
+    </ul>
 
     <h3>5. Children</h3>
     <p>The App is intended for a general audience and is not specifically directed at children under 13. We do not knowingly collect personal data from children.</p>
@@ -121,6 +146,14 @@
 
     <h3>8. Contact</h3>
     <p>Da Cunha Carreira Hugo – <a href="mailto:hugodacunhacarreira@gmail.com">hugodacunhacarreira@gmail.com</a></p>
+  </section>
+
+  <!-- ===================================================== SUPPORT -->
+  <section id="support">
+    <h2>Assistance · Support</h2>
+    <p>Une question, un bug, une suggestion ? Écrivez-nous, nous répondons généralement sous quelques jours.</p>
+    <p>A question, a bug, a suggestion? Write to us, we usually reply within a few days.</p>
+    <p><a href="mailto:hugodacunhacarreira@gmail.com?subject=Mental%20Blast">hugodacunhacarreira@gmail.com</a></p>
   </section>
 </main>
 </body>
